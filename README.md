@@ -17,7 +17,7 @@ ghost_net_model = ghost_net_obj.create_model("small")
 
 The "width_multiplier" parameter can be used to scale up or down the GhostNet, which results in architectures with fewer parameters ```(i.e. width_multiplier=0.1) ~1.4M.```<br>
 
-Block configuration and meaning: ```[16,16,0.25,2,3]``` - expansion_ratio, out_channels, Squeeze-Excitation[3] value, strides, kernel size.
+Block configuration and meaning: ```[16,16,0.25,2,3]``` - expansion, out_channels, Squeeze-Excitation[3] value, strides, kernel size.
 
 ```Note: the original paper used the standard 224x224 input, smaller inputs can be applied, if the AveragePooling kernel is adjusted, or adjusting the Squeeze-Excitation module value.```  
 
