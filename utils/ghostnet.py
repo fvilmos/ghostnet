@@ -125,10 +125,6 @@ def ghost_bottleneck(input,expansion, output, use_se=False, strides=(1,1), kerne
     
     # prepare input
     y = input
-
-    # check channels is equal
-    #if input.shape[-1] != output:
-        #print ("ping")
     y = keras.layers.DepthwiseConv2D(kernel_size=kernel_size, strides=strides, padding='SAME', depth_multiplier=1)(input)
     y = keras.layers.BatchNormalization()(y)
     
